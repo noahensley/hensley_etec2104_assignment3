@@ -6,25 +6,25 @@ D={
         "name" : "Alice Smith", 
         "dob" : "Jan. 1",
         "email": "alice@example.com",
-        "icon": "/alice_smith.png"
+        "icon": "/static/alice_smith.png"
     },
     "bob": { 
         "name" : "Bob Jones",
         "dob" : "Dec. 31",
         "email" : "bob@bob.xyz",
-        "icon": "/bob_jones.png"
+        "icon": "/static/bob_jones.png"
     },
     "carol": {
         "name" : "Carol Ling",
         "dob" : "Jul. 17",
         "email" : "carol@example.com",
-        "icon": "/carol_ling.png"
+        "icon": "/static/carol_ling.png"
     },
     "dave": {
         "name" : "Dave N. Port",
         "dob" : "Mar. 14",
         "email" : "dave@dave.dave",
-        "icon": "/dave_n_port.png"
+        "icon": "/static/dave_n_port.png"
     }
 }
 

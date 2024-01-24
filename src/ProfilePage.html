@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 
-<h1>
-    {{name}}
-    <img src="{{icon}}">
-</h1>
-
 <body>
-    <h1>User Details</h1>
-    <p>Name: {{name}}</p>
-    <p>DOB: {{dateOfBirth}}</p>
-    <p>Email: {{email}}</p>
+    <div class="header">
+        <img src="{{icon}}">
+        <span>{{name}}</span>
+    </div>  
+    
+    <div class="table-container">
+        <table class="user-data">
+            <tr>
+                <th class="field">User<th class="field">DOB<th class="field">Email
+            </tr>
+            <tr>
+                <td class="entry">{{user}}<td class="entry">{{dateOfBirth}}<td class="entry">{{email}}
+            </tr>    
+        </table>  
+    </div>
 </body>
+
 </html>

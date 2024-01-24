@@ -1,0 +1,48 @@
+html {
+    background-color: white 
+}
+
+/* Profile Picture */
+div.header img {
+    width: 52px;
+    height: 52px;
+    border-color: white;
+    border: 1px solid;
+}
+
+/* Name Container */
+div.header {
+    display: flex; /* ChatGPT showed me this simple layout */
+    align-items: center;
+    width: 156px;
+    height: 52px;
+    font-weight: bold;
+    position: fixed;
+    background-color: gainsboro;
+    border: 1px solid;
+}
+
+/* Profile Name */
+div.header span {
+    margin-left: 10px;
+    text-align: center;
+}
+
+div.table-container {
+    padding-top: 57px; /* ChatGPT showed me how to use paddings */
+}
+
+table.user-data {
+    border-color: black;
+    border: 1px solid;
+}
+
+th.field {
+    background: gainsboro;
+}
+
+td.entry {  
+    border-color: black;
+    border: 1px solid;
+}
+
