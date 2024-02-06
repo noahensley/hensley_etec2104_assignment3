@@ -1,5 +1,4 @@
 import tornado.web
-import main
 
 D={
     "alice": {
@@ -31,10 +30,9 @@ D={
 class Handler(tornado.web.RequestHandler):
     def get(self):
         L = self.request.path.split("/")
-        # print(L)
         uname = L[2]
         info = D[uname]
         if info:
-            self.render( "ProfilePage.html",
+            self.render( "updateprofile.html",
                 name=info["name"], dateOfBirth=info["dob"],
                 email=info["email"], user=uname, icon=info["icon"])

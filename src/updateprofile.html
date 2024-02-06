@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="{{icon}}">
+        <span>{{fname}} {{lname}}</span>
+    </div>  
+    
+    <div class="table-container">
+        <table class="user-data">
+            <tr style="background-color: gainsboro">
+                <th>User</th><th>DOB</th><th>Email</th>
+            </tr>
+            <tr>
+                <td class="entry">{{user}}<td class="entry">{{dateOfBirth}}<td class="entry">{{email}}
+            </tr>    
+        </table>  
+    </div>
+
+    <br>
+
+    <div>
+        <table class="user-data">
+            <tr><th>Make Changes</th></tr>
+            <tr><td>First Name: <td><input id="fname">
+            <tr><td>Last Name: <td><input id="lname">
+            <tr><td>Date of Birth:  <td><input id="birthdate" type='date'>
+            <tr><td>Profile Picture: </td><td><input id="ppic" type="file"></td></tr>
+            <tr><td><button onclick="submit()">Submit</button></td></tr>
+        </table>
+    </div>
+</body>
+
+<script src="/static/updateprofile.js"></script>
+
+</html>
+

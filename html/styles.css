@@ -37,10 +37,6 @@ table.user-data {
     border: 1px solid;
 }
 
-th.field {
-    background: gainsboro;
-}
-
 td.entry {  
     border-color: black;
     border: 1px solid;
