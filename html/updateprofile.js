@@ -11,11 +11,13 @@ if(!file){
 let R = new FileReader();
 R.addEventListener("load", () => {
     let profilepic = btoa(R.result)
+    let uname = document.getElementById("username").innerHTML;
     let fname = document.getElementById("fname").value;
     let lname = document.getElementById("lname").value;
     let dob = document.getElementById("birthdate").value;
     // console.log("Info:",fname,lname,dob);
     let J = {
+        userName: uname,
         firstName: fname,
         lastName: lname,
         birthDate: dob,
@@ -26,8 +28,9 @@ R.addEventListener("load", () => {
             body: JSON.stringify(J)
         }
     ).then( (resp) => {
-        resp.json().then( (J) => {
+        resp.text().then( (J) => {
             console.log("Server said:",J);
+            document.body.innerHTML = J
         });
     }).catch( (err) => {
         console.log("Uh oh",err);
