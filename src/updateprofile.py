@@ -1,5 +1,6 @@
 import tornado.web
 import json
+import base64
 
 D={
     "alice": {
@@ -44,10 +45,11 @@ class Handler(tornado.web.RequestHandler):
             
     def post(self):
         J=json.loads(self.request.body)
-        fullName = J["name"]
+        firstName = J["firstName"]
+        lastName = J["lastName"]
         dob = J["birthDate"]
-        print("WE GOT:",fullName,dob)
-
+        ppic = base64.b64decode(J["pic"])
+        print("WE GOT:",firstName,lastName,dob,ppic[:20])
         resp={"ok": True}
         self.write( json.dumps(resp) )
      
