@@ -7,7 +7,7 @@
 <body>
     <div class="header">
         <img src="{{icon}}">
-        <span>{{fname}} {{lname}}</span>
+        <span>{{fname}}<br>{{lname}}</span>
     </div>  
     
     <div class="table-container">
@@ -29,7 +29,7 @@
             <tr><td>First Name: <td><input id="fname">
             <tr><td>Last Name: <td><input id="lname">
             <tr><td>Date of Birth:  <td><input id="birthdate" type='date'>
-            <tr><td>Profile Picture: </td><td><input id="ppic" type="file"></td></tr>
+            <tr><td id="ppicinput">Profile Picture: </td><td><input id="ppic" type="file"></td></tr>
             <tr><td><button onclick="submit()">Submit</button></td></tr>
         </table>
     </div>

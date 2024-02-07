@@ -50,23 +50,27 @@ class Handler(tornado.web.RequestHandler):
         lastName = J["lastName"]
         dob = J["birthDate"]
         ppic = base64.b64decode(J["pic"])
+        ppic_str = J["pic"]
         print("WE GOT:",userName,firstName,lastName,dob,ppic[:20])
 
         # writes the data to the dictionary
         D[userName]["fname"] = firstName
         D[userName]["lname"] = lastName
         D[userName]["dob"] = dob    
-        if ppic[:2] == b"\x89PNG": # PNG
-            D[userName]["icon"] = "data:image/png;base64," + ppic
-        elif ppic[:2] == b"\xff\xd8": # JPEG
-            D[userName]["icon"] = "data:image/jpeg;base64," + ppic
-        resp="Updated."
-        self.write( json.dumps(resp) )
-        info = D[userName]
-        
+        if ppic[:4] == b'\x89PNG': # PNG
+            image_data = "data:image/png;base64," + ppic_str
+            # print(image_data)
+            D[userName]["icon"] = image_data
+        elif ppic[:4] == b'\xff\xd8': # JPEG
+            image_data = "data:image/jpeg;base64," + ppic_str
+            # print(image_data)
+            D[userName]["icon"]
+
         # presents the updated info to the user
+        info = D[userName]
         if info:
             self.render( "updateprofile.html",
                 fname=info["fname"], lname=info["lname"], dateOfBirth=info["dob"],
                 email=info["email"], user=userName, icon=info["icon"])
-     
+            
+        

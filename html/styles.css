@@ -20,12 +20,16 @@ div.header {
     position: fixed;
     background-color: gainsboro;
     border: 1px solid;
+    flex-grow: 1
 }
 
 /* Profile Name */
 div.header span {
     margin-left: 10px;
     text-align: center;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 div.table-container {
@@ -40,5 +44,10 @@ table.user-data {
 td.entry {  
     border-color: black;
     border: 1px solid;
+}
+
+.error-input {
+    border: 2px solid red;
+    background-color: lightpink
 }
 
